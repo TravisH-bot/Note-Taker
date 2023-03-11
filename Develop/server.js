@@ -23,6 +23,11 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
+// Fallback route for when a user attempts to visit routes that don't exist
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/index.html"))
+);
+
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🍜`)
 );
