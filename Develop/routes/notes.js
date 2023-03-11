@@ -1,5 +1,5 @@
 const notes = require("express").Router();
-const { v4: uuidv4 } = require("uuid");
+const uuid = require("../helpers/uuid");
 const {
   readFromFile,
   readAndAppend,
@@ -8,13 +8,13 @@ const {
 
 // GET Route for retrieving all the notes
 notes.get("/", (req, res) => {
-  readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
+  readFromFile("./db/notes.json").then((data) => res.json(JSON.parse(data)));
 });
 
 // GET Route for retrieving a specific note
 notes.get("/:note_id", (req, res) => {
   const noteId = req.params.note_id;
-  readFromFile("./db/db.json")
+  readFromFile("./db/notes.json")
     .then((data) => JSON.parse(data))
     .then((json) => {
       const result = json.filter((note) => note.note_id === noteId);
@@ -34,14 +34,26 @@ notes.post("/", (req, res) => {
     const newNote = {
       title: title,
       text: text,
-      note_id: uuidv4(),
+      note_id: uuid(),
     };
 
-    readAndAppend(newNote, "./db/db.json");
+    readAndAppend(newNote, "./db/notes.json");
     res.json(`Note added successfully 🍜`);
   } else {
     res.error("Error in adding note");
   }
+});
+
+// DELETE route for a specific note
+notes.delete("/:note_id", (req, res) => {
+  const noteId = req.params.note_id;
+  readFromFile("./db/notes.json")
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      const result = json.filter((note) => note.note_id !== noteId);
+      writeToFile("./db/notes.json", result);
+      res.json(`Item ${noteId} has been deleted 🗑️`);
+    });
 });
 
 module.exports = notes;
