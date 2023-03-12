@@ -4,7 +4,7 @@
 
 ## Description
 
-The project is a note taking application that allows users to store new notes with a title and description. Users can also access previously stored notes from a list by clicking on one of thier choice. Users can also delete noters from the list.
+The project is a note taking application that allows users to store new notes with a title and description. Users can also access previously stored notes from a list by clicking on one of their choices. Users can also delete notes from the list.
 
 ## Table Of Contents
 
@@ -36,7 +36,7 @@ Users will also need to install express and uuid.
 3. Once a title and text have been entered, a save icon will appear in the upper right hand corner. Once clicked, the note will be saved to the side bar.
 ![notes3](https://user-images.githubusercontent.com/79767820/224523039-559942d7-96e0-4d08-9a72-3e2efb830669.png)
 
-4. Notes can also be deleted by clicking on the red trashcan icon next to each note. 
+4. Notes can also be deleted by clicking on the red trash can icon next to each note. 
 ![notes4](https://user-images.githubusercontent.com/79767820/224523143-d7d2930d-e145-4d2d-9ea4-76b92dc7cede.png)
 
 
