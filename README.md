@@ -23,9 +23,22 @@ To install necessary dependencies, run the following command:
 npm i
 ```
 
+Users will also need to install express and uuid.
+
 ## Usage
 
-Users will need to install express and uuid.
+1. Upon first use, users will see the Note Taker home page and a button to "Get Started".
+![notes1](https://user-images.githubusercontent.com/79767820/224523035-1aca3805-c324-4081-81d5-3bfdde65dbde.png)
+
+2. Once clicked, users will see the input field to add a new note. 
+![notes2](https://user-images.githubusercontent.com/79767820/224523038-ad0b2ad7-71b7-4e8e-bd9a-dfec785c1d4d.png)
+
+3. Once a title and text have been entered, a save icon will appear in the upper right hand corner. Once clicked, the note will be saved to the side bar.
+![notes3](https://user-images.githubusercontent.com/79767820/224523039-559942d7-96e0-4d08-9a72-3e2efb830669.png)
+
+4. Notes can also be deleted by clicking on the red trashcan icon next to each note. 
+![notes4](https://user-images.githubusercontent.com/79767820/224523143-d7d2930d-e145-4d2d-9ea4-76b92dc7cede.png)
+
 
 ## License
 
