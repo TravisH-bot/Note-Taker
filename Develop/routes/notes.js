@@ -12,6 +12,7 @@ notes.get("/", (req, res) => {
 });
 
 // GET Route for retrieving a specific note
+
 notes.get("/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   readFromFile("./db/notes.json")
