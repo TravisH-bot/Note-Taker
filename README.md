@@ -23,7 +23,7 @@ To install necessary dependencies, run the following command:
 npm i
 ```
 
-Users will also need to install express and uuid.
+Users may need to install ![uuid](https://www.npmjs.com/package/uuid) as well.
 
 ## Usage
 
