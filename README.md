@@ -39,6 +39,8 @@ Users may need to install ![uuid](https://www.npmjs.com/package/uuid) as well.
 4. Notes can also be deleted by clicking on the red trash can icon next to each note. 
 ![notes4](https://user-images.githubusercontent.com/79767820/224523143-d7d2930d-e145-4d2d-9ea4-76b92dc7cede.png)
 
+The URL of the functional, deployed application: https://quiet-meadow-62844.herokuapp.com/notes
+
 
 ## License
 
